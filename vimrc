@@ -194,21 +194,15 @@ nnoremap <F5> :GundoToggle<CR>
 let g:DeleteTrailingWhitespace = 1
 let g:DeleteTrailingWhitespace_Action = 'delete'
 
-" Command-T
-" find file
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-
-" find file in current directory
-map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
-
-let g:CommandTMaxHeight = 20
+" CtrlP
+nmap <leader>f :CtrlP<cr>
+let g:ctrlp_working_path_mode = 0
 
 "  ---------------------------------------------------------------------------
 "  Directories
 "  ---------------------------------------------------------------------------
 
 set backupdir=~/tmp,/tmp
-set undodir=~/.vim/.tmp,~/tmp,~/.tmp,/tmp
 
 " Ctags path (brew install ctags)
 let Tlist_Ctags_Cmd = 'ctags'
