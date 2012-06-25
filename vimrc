@@ -220,6 +220,9 @@ endif
 "  Misc
 "  ---------------------------------------------------------------------------
 
+" enable nginx coloring
+au BufRead,BufNewFile /etc/nginx/sites* set ft=nginx
+
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %
 autocmd! bufwritepost vimrc source %
