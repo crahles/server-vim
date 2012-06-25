@@ -22,6 +22,7 @@ Bundle "git://github.com/mileszs/ack.vim.git"
 Bundle "git://github.com/kien/ctrlp.vim.git"
 Bundle "git://github.com/vim-scripts/jQuery.git"
 Bundle "git://github.com/tpope/vim-fugitive"
+Bundle "git://github.com/jinfield/vim-nginx.git"
 Bundle "git://github.com/sjl/gundo.vim.git"
 
 filetype plugin indent on     " and turn it back on!
