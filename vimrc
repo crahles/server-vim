@@ -210,7 +210,7 @@ endif
 "  ---------------------------------------------------------------------------
 
 " enable nginx coloring
-au BufRead,BufNewFile /etc/nginx/sites* set ft=nginx
+au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %
