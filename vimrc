@@ -54,17 +54,6 @@ set winheight=5
 set winminheight=5
 set winheight=999
 
-syntax enable
-let g:solarized_termcolors=256
-colorscheme solarized
-set background=dark
-
-" When the terminal has colors, enable syntax+search highlighting
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
-
 set splitbelow splitright
 
 "  ---------------------------------------------------------------------------
@@ -226,3 +215,7 @@ au BufRead,BufNewFile /etc/nginx/sites* set ft=nginx
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %
 autocmd! bufwritepost vimrc source %
+
+let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
