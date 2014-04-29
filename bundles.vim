@@ -11,19 +11,17 @@ set runtimepath+=/etc/vim/bundle/vundle/
 call vundle#rc("/etc/vim/bundle")
 
 Bundle 'gmarik/vundle'
-Bundle "git://github.com/tpope/vim-rails.git"
-Bundle "git://github.com/vim-ruby/vim-ruby.git"
-Bundle "git://github.com/pangloss/vim-javascript.git"
+Bundle 'git://github.com/mileszs/ack.vim.git'
+Bundle 'git://github.com/kien/ctrlp.vim.git'
+Bundle 'git://github.com/bling/vim-airline.git'
+Bundle 'git://github.com/ervandew/supertab.git'
 Bundle 'git://github.com/vim-scripts/DeleteTrailingWhitespace.git'
-Bundle "git://github.com/altercation/vim-colors-solarized.git"
-Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-Bundle "git://github.com/ervandew/supertab.git"
-Bundle "git://github.com/mileszs/ack.vim.git"
-Bundle "git://github.com/kien/ctrlp.vim.git"
-Bundle "git://github.com/vim-scripts/jQuery.git"
-Bundle "git://github.com/tpope/vim-fugitive"
-Bundle "git://github.com/jinfield/vim-nginx.git"
-Bundle "git://github.com/sjl/gundo.vim.git"
+Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+Bundle 'git://github.com/tomtom/tcomment_vim.git'
+Bundle 'git://github.com/jinfield/vim-nginx.git'
+Bundle 'git://github.com/tpope/vim-rails.git'
+Bundle 'git://github.com/tpope/vim-haml.git'
+Bundle 'git://github.com/sjl/gundo.vim.git'
 
 filetype plugin indent on     " and turn it back on!
 

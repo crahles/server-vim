@@ -102,24 +102,8 @@ nmap N Nzz
 imap <C-h> <ESC>^
 imap <C-l> <ESC>$
 
-" Turn off arrow keys (this might not be a good idea for beginners, but it is
-" the best way to ween yourself of arrow keys on to hjkl)
-" http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
-
-" nnoremap <Left> :echoe "Use h"<CR>
-" nnoremap <Right> :echoe "Use l"<CR>
-" nnoremap <Up> :echoe "Use k"<CR>
-" nnoremap <Down> :echoe "Use j"<CR>"
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
-
 nnoremap j gj
 nnoremap k gk
-
-" Map ESC
-imap jj <ESC>
 
 " ACK
 set grepprg=ack
@@ -179,6 +163,10 @@ nnoremap <F5> :GundoToggle<CR>
 "  Plugins
 "  ---------------------------------------------------------------------------
 
+" Easy commenting
+nnoremap // :TComment<CR>
+vnoremap // :TComment<CR>
+
 " eradicate all trailing whitespace all the time
 let g:DeleteTrailingWhitespace = 1
 let g:DeleteTrailingWhitespace_Action = 'delete'
@@ -186,6 +174,10 @@ let g:DeleteTrailingWhitespace_Action = 'delete'
 " CtrlP
 nmap <leader>f :CtrlP<cr>
 let g:ctrlp_working_path_mode = 0
+
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
 
 "  ---------------------------------------------------------------------------
 "  Directories
@@ -206,11 +198,30 @@ if filereadable($HOME . '.vimrc.local')
 endif
 
 "  ---------------------------------------------------------------------------
-"  Misc
+"  Language Mappings
 "  ---------------------------------------------------------------------------
+
+" Other files to consider Ruby
+au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=
+
+" Python
+autocmd FileType python set sw=4 sts=4 et
+
+" CoffeeScript
+let coffee_compile_vert = 1
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+
+" SASS / SCSS
+au BufNewFile,BufReadPost *.scss setl foldmethod=indent
+au BufNewFile,BufReadPost *.sass setl foldmethod=indent
+au BufRead,BufNewFile *.scss set filetype=scss
 
 " enable nginx coloring
 au BufRead,BufNewFile /etc/nginx/* set ft=nginx
+
+"  ---------------------------------------------------------------------------
+"  Misc
+"  ---------------------------------------------------------------------------
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %
